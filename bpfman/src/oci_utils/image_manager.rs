@@ -75,6 +75,7 @@ impl ImageManager {
         };
         let config = ClientConfig {
             protocol: ClientProtocol::Https,
+            accept_invalid_certificates: true,
             ..Default::default()
         };
         let client = Client::new(config);
